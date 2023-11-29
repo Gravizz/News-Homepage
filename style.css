@@ -6,8 +6,13 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "inter", sans-serif;
+  font-family: "inter", serif;
   font-size: 15px;
+}
+body {
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 /*-------------------------------------header------------------------------------------*/
 header {
@@ -21,24 +26,30 @@ a {
   text-decoration: none;
   color: hsl(233, 8%, 79%);
 }
+a:hover {
+  color: hsl(240, 100%, 5%);
+}
 /*-------------------------------------header------------------------------------------*/
 /*--------------------------------------main-------------------------------------------*/
 main {
   display: flex;
+  margin-bottom: 20px;
 }
 main p {
-  font-size: 1.3rem;
   line-height: 1.5;
   color: hsl(236, 13%, 42%);
+  font-size: 1.4rem;
 }
 .left {
-  width: 65%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 70%;
+  margin: 10px;
 }
 .web-image {
   width: 100%;
   margin: 10px;
+}
+.web-pic-mobile {
+  display: none;
 }
 figcaption {
   display: flex;
@@ -46,17 +57,19 @@ figcaption {
   margin: 10px;
 }
 h1 {
-  font-size: 3rem;
+  width: 35%;
+  font-size: 3.5rem;
   font-weight: 800;
   color: hsl(240, 100%, 5%);
+  margin-bottom: 10px;
 }
 .detail {
-  width: 50%;
+  width: 60%;
   line-height: 1.5;
   font-weight: 400;
 }
 button {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 150px;
   height: 40px;
   color: hsl(36, 100%, 99%);
@@ -64,11 +77,14 @@ button {
   background-color: hsl(5, 85%, 63%);
   border: none;
 }
+button:hover {
+  background-color: hsla(5, 85%, 63%, 0.7);
+}
 .right {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 35%;
+  width: 30%;
   background-color: hsl(240, 100%, 5%);
   color: hsl(36, 100%, 99%);
   padding: 25px;
@@ -82,36 +98,41 @@ main h2 {
 main h3 {
   font-size: 1.3rem;
 }
+main .right p {
+  color: hsl(36, 100%, 99%);
+}
 .line {
   border: 1px solid white;
   height: 1px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 /*--------------------------------------main-------------------------------------------*/
 /*-------------------------------------footer------------------------------------------*/
 footer {
   display: flex;
+  margin-bottom: 100px;
 }
 footer img {
   width: 50%;
-  height: 70%;
+  height: 60%;
+  margin-right: 10px;
 }
-article {
+footer section {
   width: 30%;
   display: flex;
   margin: 10px;
 }
-section {
-  margin: 10px;
-  padding: 5px;
+article {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 footer h3 {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: hsl(233, 8%, 79%);
 }
-h5 {
-  font-size: 14px;
+footer h5 {
+  font-size: 1rem;
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 800;
@@ -122,3 +143,54 @@ footer p {
   color: hsl(236, 13%, 42%);
 }
 /*-------------------------------------footer------------------------------------------*/
+@media screen and (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
+  main,
+  figcaption,
+  footer {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .left,
+  .right,
+  h1,
+  .detail,
+  footer section {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .detail p {
+    font-size: 1.1rem;
+  }
+  .web-image {
+    display: none;
+  }
+  .web-pic-mobile {
+    display: block;
+    width: 100%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  main .right p {
+    font-size: 1.1rem;
+  }
+  footer img {
+    width: 30%;
+    height: auto;
+  }
+  footer article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  footer h5 {
+    font-size: 1.2rem;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+}
