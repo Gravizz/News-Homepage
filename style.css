@@ -9,7 +9,7 @@
   font-family: "inter", sans-serif;
   font-size: 15px;
 }
-
+/*-------------------------------------header------------------------------------------*/
 header {
   display: flex;
   justify-content: space-between;
@@ -17,20 +17,24 @@ header {
   margin: 10px;
 }
 a {
-  margin: 10px;
+  margin: 22px;
   text-decoration: none;
   color: hsl(233, 8%, 79%);
 }
+/*-------------------------------------header------------------------------------------*/
+/*--------------------------------------main-------------------------------------------*/
 main {
   display: flex;
 }
-footer {
-  display: flex;
+main p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: hsl(236, 13%, 42%);
 }
-.right {
+.left {
   width: 65%;
   margin-top: 10px;
-  margin-bottom: 10PX;
+  margin-bottom: 10px;
 }
 .web-image {
   width: 100%;
@@ -60,7 +64,7 @@ button {
   background-color: hsl(5, 85%, 63%);
   border: none;
 }
-.left {
+.right {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -70,16 +74,24 @@ button {
   padding: 25px;
   margin: 25px;
 }
-h2 {
+main h2 {
   font-size: 2.5rem;
   color: hsl(35, 77%, 62%);
   margin-bottom: 20px;
+}
+main h3 {
+  font-size: 1.3rem;
 }
 .line {
   border: 1px solid white;
   height: 1px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+/*--------------------------------------main-------------------------------------------*/
+/*-------------------------------------footer------------------------------------------*/
+footer {
+  display: flex;
 }
 footer img {
   width: 50%;
@@ -94,8 +106,8 @@ section {
   margin: 10px;
   padding: 5px;
 }
-h3 {
-  font-size: 1.4rem;
+footer h3 {
+  font-size: 1.3rem;
   color: hsl(233, 8%, 79%);
 }
 h5 {
@@ -103,9 +115,10 @@ h5 {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 800;
-  color: hsl(240, 100%, 5%));
+  color: hsl(240, 100%, 5%);
 }
 footer p {
   font-size: 12px;
   color: hsl(236, 13%, 42%);
 }
+/*-------------------------------------footer------------------------------------------*/
